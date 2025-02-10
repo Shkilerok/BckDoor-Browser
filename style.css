@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+}
+
+header {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #212121;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#authButtons,
+#logoutButton,
+#adminPanel,
+#authForm,
+#registerForm,
+#loginForm,
+#createSiteFormDiv,
+#grantAccessFormDiv,
+#adminSiteManagement,
+#siteEditPanel,
+#editSiteFormDiv {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #5e35b1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #7e57c2;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    width: calc(100% - 22px);
+}
+
+.message {
+    color: #ffab40;
+    margin-top: 10px;
+}
+
+#siteList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#siteList li {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#siteList li button.delete-site-button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#siteList li button.delete-site-button:hover {
+    background-color: #f44336;
+}
+
+textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    width: calc(100% - 22px);
+    font-family: monospace;
+    min-height: 100px;
+}
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#siteSearchBar {
+    width: 70%;
+    margin-right: 10px;
+}
+
+/* Скрываем элементы при просмотре сайта */
+.site-view header,
+.site-view #authForm,
+.site-view #adminPanel,
+.site-view #adminSiteManagement,
+.site-view #searchBar,
+.site-view footer,
+.site-view #siteEditPanel {
+    display: none !important;
+}
+
+/* Стиль для кнопки "Назад" */
+#backButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+#siteEditPanel {
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 5px;
+}
+
+#siteEditPanel textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 10px;
+}
+
+#editSiteFormDiv {
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 5px;
+}
+
+#editSiteFormDiv textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 10px;
+}/* Стили для полей ввода изображений */
+#siteImageHtml,
+#editSiteImageHtml,
+#siteImageHtmlEdit {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    width: calc(100% - 22px);
+    font-family: monospace;
+    min-height: 100px; /* Можете настроить высоту по своему вкусу */
+}

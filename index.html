@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BckDoorBrowser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>BckDoorBrowser</h1>
+            <div id="authButtons">
+                <button id="registerButton">Регистрация</button>
+                <button id="loginButton">Вход</button>
+            </div>
+            <button id="logoutButton" style="display: none;">Выход</button>
+
+            <div id="searchBar">
+                <input type="text" id="siteSearchBar" placeholder="Введите имя сайта..." list="siteSuggestions">
+                <datalist id="siteSuggestions"></datalist>
+                <button id="goButton">Перейти</button>
+            </div>
+        </header>
+
+        <div id="authForm" style="display: none;">
+            <div id="registerForm" style="display: none;">
+                <h2>Регистрация</h2>
+                <input type="text" id="usernameRegister" placeholder="Логин">
+                <input type="password" id="passwordRegister" placeholder="Пароль">
+                <button id="registerSubmit">Зарегистрироваться</button>
+                <p id="registerMessage" class="message"></p>
+            </div>
+
+            <div id="loginForm" style="display: none;">
+                <h2>Вход</h2>
+                <input type="text" id="usernameLogin" placeholder="Логин">
+                <input type="password" id="passwordLogin" placeholder="Пароль">
+                <button id="loginSubmit">Войти</button>
+                <p id="loginMessage" class="message"></p>
+            </div>
+        </div>
+
+        <div id="adminPanel" style="display: none;">
+            <h2>Админ-панель</h2>
+            <button id="createSiteButton">Создать сайт</button>
+            <button id="grantSiteAccessButton">Выдать доступ к сайту</button>
+            <button id="editSiteButton">Редактировать сайт</button>
+
+            <div id="createSiteFormDiv" style="display: none;">
+                <h3>Создать новый сайт</h3>
+                <input type="text" id="siteName" placeholder="Имя сайта">
+                <input type="text" id="siteDescription" placeholder="Описание сайта">
+
+                <h4>HTML Код</h4>
+                <textarea id="siteHtml" placeholder="HTML код сайта"></textarea>
+                <h4>CSS Код</h4>                <textarea id="siteCss" placeholder="CSS код сайта"></textarea>
+                <h4>JavaScript Код</h4>
+                <textarea id="siteJs" placeholder="JavaScript код сайта"></textarea>
+
+                <!-- Добавлено поле для HTML-кода видео -->
+                <h4>HTML Код Видео</h4>
+                <textarea id="siteVideoHtml" placeholder="HTML код видео"></textarea>
+
+                <button id="submitNewSite">Создать сайт</button>
+                <p id="createSiteMessage" class="message"></p>
+            </div>
+
+            <div id="grantAccessFormDiv" style="display: none;">
+                <h3>Выдать доступ к сайту пользователю</h3>
+                <input type="text" id="accessUsername" placeholder="Имя сайта">
+                <input type="text" id="grantAccessUsername" placeholder="Имя пользователя">
+                <button id="submitGrantAccess">Выдать доступ</button>
+                <p id="grantAccessMessage" class="message"></p>
+            </div>
+
+            <!-- Форма для редактирования сайта -->
+            <div id="editSiteFormDiv" style="display: none;">
+                <h3>Редактировать сайт</h3>
+                <input type="text" id="editSiteName" placeholder="Имя сайта для редактирования">
+
+                <h4>HTML Код</h4>
+                <textarea id="editSiteHtml" placeholder="HTML код сайта"></textarea>
+                <h4>CSS Код</h4>
+                <textarea id="editSiteCss" placeholder="CSS код сайта"></textarea>
+                <h4>JavaScript Код</h4>
+                <textarea id="editSiteJs" placeholder="JavaScript код сайта"></textarea>
+
+                <!-- Добавлено поле для HTML-кода видео -->
+                <h4>HTML Код Видео</h4>
+                <textarea id="editSiteVideoHtml" placeholder="HTML код видео"></textarea>
+
+                <button id="submitEditSite">Сохранить изменения</button>
+                <p id="editSiteMessage" class="message"></p>
+            </div>
+        </div>
+
+        <div id="adminSiteManagement" style="display: none;">
+            <h2>Управление сайтами</h2>
+            <input type="text" id="siteSearchInput" placeholder="Поиск сайта">
+            <div id="siteList"></div>
+        </div>
+
+        <button id="backButton" style="display: none;">Назад</button>
+
+        <div id="siteEditPanel" style="display: none;">
+            <h2>Редактирование сайта</h2>
+            <textarea id="siteHtmlEdit" placeholder="HTML код сайта"></textarea>
+            <textarea id="siteCssEdit" placeholder="CSS код сайта"></textarea>
+            <textarea id="siteJsEdit" placeholder="JavaScript код сайта"></textarea>
+
+            <!-- Добавлено поле для HTML-кода видео -->
+            <h4>HTML Код Видео</h4>
+            <textarea id="siteVideoHtmlEdit" placeholder="HTML код видео"></textarea>
+
+            <button id="saveSiteButton">Сохранить</button>
+            <button id="cancelSiteButton">Отмена</button>
+            <p id="editSiteMessage" class="message"></p>
+        </div>
+
+        <main id="siteContent">
+            <p>Добро пожаловать в анонимный браузер!</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Анонимный Браузер BckDoor</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
